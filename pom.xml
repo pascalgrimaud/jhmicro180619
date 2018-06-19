@@ -37,7 +37,7 @@
             <url>http://artifactory:8081/artifactory/libs-snapshot</url>
         </snapshotRepository>
         <repository>
-            <id>'releases</id>
+            <id>releases</id>
             <url>http://artifactory:8081/artifactory/libs-release</url>
         </repository>
     </distributionManagement>
