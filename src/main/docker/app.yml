@@ -1,0 +1,13 @@
+version: '2'
+services:
+    jhmicro180619-app:
+        image: jhmicro180619
+        environment:
+            # - _JAVA_OPTIONS=-Xmx512m -Xms256m
+            - SPRING_PROFILES_ACTIVE=prod,swagger
+            - SPRING_DATASOURCE_URL=jdbc:mysql://jhmicro180619-mysql:3306/jhmicro180619?useUnicode=true&characterEncoding=utf8&useSSL=false
+            - JHIPSTER_SLEEP=10 # gives time for the database to boot before the application
+    jhmicro180619-mysql:
+        extends:
+            file: mysql.yml
+            service: jhmicro180619-mysql
